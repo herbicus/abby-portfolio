@@ -1,0 +1,155 @@
+// -------------------------------------
+//   About
+// -------------------------------------
+// ----- About Page Stylings
+// -------------------------------------
+
+.l-about-section {
+	padding-top: 10em;
+	background: #FFF; 
+	
+	@include media( max-width 1024px, 6) { // tablet & below
+		padding-top: 4em;
+	}
+
+	.l-desktop-img {
+		display: block;
+		@include media( max-width 400px, 6) { // tablet & below
+			display: none;
+		}
+	}
+
+	.l-mobile-img {
+		display: none;
+		@include media( max-width 400px, 6) { // tablet & below
+			display: block;
+		}
+	}
+}
+
+.l-desktop-img {
+	display: block;
+	@include media( max-width 400px, 6) { // tablet & below
+		display: none;
+	}
+}
+
+.l-mobile-img {
+	display: none;
+	@include media( max-width 400px, 6) { // tablet & below
+		display: block;
+	}
+}
+
+.l-skills-section {
+	h1 {
+			padding: 0.75em 0;
+		}
+	.three-col {
+		h3 {
+			text-align: center;
+			padding-bottom: 0.5em;
+		}
+		ul {
+		 	list-style-type: circle;
+		 	list-style-image: url("../img/list-style-image.png"); 
+		 	padding-left: 40%;
+		}
+	}
+}
+
+.l-contact-section {
+	min-height: 100vh;
+	background: url("../img/atl-img-x.jpg")fixed;
+	background: url("../img/pr-bg-opacity.jpg")fixed;
+	background: url("../img/contact-split.jpg")fixed;
+	position: relative;
+	@include bg-cover;
+	
+	h1, li, a {
+		color: #fff;
+		text-shadow: 0 2px 2px $primaryGrey; 
+		
+	}
+
+	a:hover {
+		color: $primaryRed;
+	}
+
+	li {
+		font-size: 20px;
+		letter-spacing: 2px;
+		line-height: 38px;
+	}
+	
+	.l-contact-bg {
+		width: 500px;
+		height: 500px;
+		// width: 45%;
+		// height: 90%;
+		@include centerer;
+		//background: rgba( $primaryGrey, 0.5);
+		background: url("../img/contact-bg-x.png");
+		@include bg-contain;
+		// -webkit-perspective-origin: center;
+		// -moz-perspective-origin: center;
+		// perspective-origin: center;
+		// @include transform(rotate(45deg));
+	}
+
+	.l-contact-container {
+		//@include transform(rotate(-45deg));
+		text-align: center;
+		
+		// width: 0;
+		// height: 0;
+		// border: 250px solid transparent;
+		// border-bottom-color: rgba( $primaryGrey, 0.5);
+		// top: -250px;
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	left: -250px;
+		// 	top: 250px;
+		// 	width: 0;
+		// 	height: 0;
+		// 	border: 250px solid transparent;
+		// 	border-top-color: rgba( $primaryGrey, 0.5);
+		// }
+		@include centerer;
+		//position: relative;
+		// @include shadow-border(red);
+		//top: 15%;
+		.l-contact-content {
+			//@include shadow-border(red);
+			color: #fff;
+			@include centerer;
+			@include transform(translate(-50%, 100%));
+			z-index: 1;
+		}
+	}
+}
+
+// -------------------------------------
+//   Blog
+// -------------------------------------
+// ----- Blog Page Stylings
+// -------------------------------------
+
+.l-blog-wrap {
+	min-height: 90vh;
+	padding-top: 10em;
+	background: #FFF; 
+	
+	.sidebar {
+		min-height: 100vh;
+		@include media( max-width 1024px, 6) { // tablet & below
+			min-height: 100px;
+		}
+
+	}
+
+	@include media( max-width 1024px, 6) { // tablet & below
+		padding-top: 4em;
+	}
+}

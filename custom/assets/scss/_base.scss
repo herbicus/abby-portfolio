@@ -1,0 +1,32 @@
+// -------------------------------------
+//   Base
+// -------------------------------------
+// ----- Global defaults for Base-level tags (body, p, etc.)
+// -------------------------------------
+
+// ----- Uncomment if project will be using rems ----- //
+// html {
+//   font-size: 62.5%;
+// }
+
+a {
+	font-family: 'Rajdhani', sans-serif;
+	color: #000;
+	font-weight: 700; 
+	text-decoration: none;
+	@include transition (all 0.3s ease-in-out);
+	&:hover {
+		cursor: pointer;
+		color: $primaryRed;
+	}
+}
+
+dl {
+	dt {
+		color: $primaryRed;
+	}
+
+	a {
+		color: lighten($primaryGrey, 20%);
+	}
+}

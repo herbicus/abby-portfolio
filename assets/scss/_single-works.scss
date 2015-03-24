@@ -1,0 +1,45 @@
+// -------------------------------------
+//   Single Works Page
+// -------------------------------------
+// ----- specific stylings for works page
+// -------------------------------------
+
+.l-sidebar-container {
+    @include span-columns(5);
+
+    p {
+        text-align: left;
+    }
+
+    @include media(max-width 768px, 6) {
+        @include span-columns(12);
+        width: 100%;
+        margin-top: 1em;
+    }
+
+}
+
+.l-main-container {
+    @include span-columns(7);
+
+
+    @include media(max-width 768px, 6) {
+        @include span-columns(12);
+        width: 100%;
+        margin-top: 1em;
+      }
+
+}
+
+.l-desktop-display {
+    @include media(max-width 768px, 6) {
+      display: none;
+    }
+}
+
+.l-mobile-display {
+    display: none;
+    @include media(max-width 768px, 6) {
+      display: block;
+    }
+}

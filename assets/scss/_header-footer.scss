@@ -1,0 +1,117 @@
+// -------------------------------------
+//   Header - Footer
+// -------------------------------------
+// ----- Header & Footer stylings
+// -------------------------------------
+
+// HEADER
+header {
+  height: 100px;
+
+  .l-header-nav {
+    padding-top: 2.25em;
+  }
+
+
+  li, li a {
+      font-family: 'neutratext';
+      font-weight: bold;
+  }
+
+  .l-categories-nav {
+        background: $primaryGray;
+        width: 97%;
+        
+        ul {
+          float: right;
+        }
+    }
+}
+
+.l-top-header {
+    // ------ LOGO ----------
+    h1 {
+       text-indent: -9999px;
+       background: url("../img/x-logo.png");
+       @include bg-contain;
+       height: 75px;
+       width: 200px; 
+    }
+}
+
+.l-desktop-header {
+    @include media(max-width 800px, 6) {
+      display: none;
+    }
+
+    h1 {
+      float: left;
+    }
+
+    nav {
+        float: right;
+        margin: 0 2%;
+        ul {
+            li {
+                display: inline-block;
+                padding: 0 1em;
+                text-transform: uppercase;
+
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.l-mobile-header {
+    display: none;
+
+    @include media(max-width 800px, 6) {
+      display: block;
+    }
+}
+
+// FOOTER
+footer {
+    height: 125px;
+    background: $primaryGray;
+    color: $primaryPurp;
+
+  .l-footer-text {
+      float: left;
+  }
+
+  .l-social-nav {
+      float: right;
+      ul {
+            li {
+                display: inline-block;
+                padding: 0 1em;
+
+                a {
+                    text-decoration: none;
+                    font-family: socicon;
+                    color: #fff;
+                    background: #000;
+                    border-radius: 50%;
+                    font-size: 1.75em;
+                    text-transform: initial;
+                    padding: 25%;
+                    //@include fade-hover;
+                    &:hover {
+                        cursor: pointer;
+                        color: #000;
+                        background: $primaryPurp;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+

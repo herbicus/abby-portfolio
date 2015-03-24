@@ -1,0 +1,75 @@
+// -------------------------------------
+//   Page Layout
+// -------------------------------------
+// ----- General Layout Stylings
+// -------------------------------------
+
+.l-works-grid {
+	min-height: 100vh;
+  	.three-col {
+		width: 30.76157%;
+	  	position: relative;
+	  	margin: 10px;
+	  	//@include transition (all 0.3s ease-in-out);
+		@include media(max-width 800px, 6) {
+			@include span-columns(12);
+			margin: 1% !important;
+			width: 31%;
+			text-align: center;
+		}
+	}
+
+	.mix {
+		display: none;
+	}
+
+	figcaption {
+	  	@include centerer;
+		top: 86%;
+		font-size: 1.5em;
+		width: 100%;
+		text-align: center;
+		color: #000;
+	  	opacity: 0;
+	  	@include transition (all 0.3s ease-in-out);
+	}
+
+	figure {
+		cursor: pointer;
+		&:hover > figcaption{
+		  opacity: 1;
+		}
+	}
+}
+
+.l-works-hero {
+  	//@include transition (all 0.3s ease-in-out);
+//  @include shadow-border(green);
+	@include span-columns(8);
+	float: left;
+	margin: 10px;
+	width: 63.88078%;
+	max-height: 578px;
+//	@include media(max-width 768px, 6) {
+//		  @include span-columns(6);
+//		  margin-top: 1em;
+//	}
+	@include media(max-width 800px, 6) {
+	  @include span-columns(12);
+	  margin: 1% !important;
+	  width: 31%;
+	  text-align: center;
+	}
+}
+
+.l-top-works-row {
+  	//min-height: 580px;
+
+  	.l-first-work {
+	  	margin-top: 0;
+	}
+}
+
+
+
+

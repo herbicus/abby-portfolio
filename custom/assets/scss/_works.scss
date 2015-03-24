@@ -1,0 +1,235 @@
+// -------------------------------------
+//   Works Pages Stylings
+// -------------------------------------
+// ----- Works Layout Specifics
+// -------------------------------------
+
+.sidebar {
+	@include span-columns(4);
+	hr {
+		border-bottom: 2px solid $primaryRed;
+	}
+
+	h1 {
+		line-height: 40px; 
+	}
+
+	a {
+		//font-weight: 400;
+		&:hover {
+			color: $primaryRed;
+		} 
+	}
+	
+	// @include media( max-width 810px, 6) { // tablet & below
+ //    	@include span-columns(6);
+	// }
+	@include media( max-width 810px, 6) { // tablet & below
+		@include span-columns(6);
+		padding: 0;
+		width: 100%;
+		max-width: 810px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 15px;
+		@include outer-container;
+		
+	}
+}
+
+.l-share-btn {
+	background: url("../img/share.png");
+	width: 150px;
+	@include bg-contain;
+	@include transition(all 0.3s ease-in-out);
+	h6 {
+		@include transition(all 0.3s ease-in-out);
+		position: relative;
+		top: 2px;
+	}
+
+	&:hover {
+		cursor: pointer;
+		background: url(../img/share-red.png);
+		@include bg-contain;
+	}
+
+	&:hover > h6 {
+		color: $primaryRed;
+	}
+
+}
+
+.social-share {
+	position: relative;
+	top: 15px;
+	left: -15%;
+	opacity: 0;
+}
+	
+.social-nav {	
+	ul {
+		padding-top: 1%;
+		li {
+			display: inline-block;
+			margin-right: 0.75em;
+			width: 40px;
+			height: 40px;
+			// -webkit-border-radius: 50%; 
+			// border-radius: 50%;
+			// background: $primaryGrey;
+			@include transition(all 0.3s ease-in-out);
+			&:hover {
+				// background: $primaryRed;
+				cursor: pointer;
+			}
+			// &:hover > a {
+			// 	color: $primaryRed;
+			// }
+			a {
+				text-indent: -9999px; 
+			    color: #000;
+			    font-weight: 400; 
+			    font-size: 1.5em;
+			    position: relative;
+			    top: 1px;
+			    left: 8px;
+				@include transition(all 0.3s ease-in-out);
+				
+				@include media( max-width 1024px, 6) { // tablet & below <a>
+					left: 0;
+				}
+			}
+
+			// chain-link web-hyperlink icon - black
+			.link-btn {
+				text-indent: -9999px;
+				background: url("../img/chain-link.png");
+				@include bg-contain;
+				color: transparent;
+				-webkit-border-radius: 50%;
+				border-radius: 50%; 
+				&:hover {
+					background: url("../img/chain-link-red.png");
+					@include bg-contain;
+					color: transparent;
+					//@include shadow-border($primaryRed);
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	@include media( max-width 1024px, 6) { // tablet & below <ul>
+		text-align: center;
+		padding: 0 0 4% 0;
+	}
+}                  
+                   
+
+.social-nav-container {
+	.icon-in {
+			background: url("../img/social/in-blk.png");
+			@include bg-contain;
+			&:hover {
+				background: url("../img/social/in-red.png");
+				@include bg-contain;
+			}
+	}
+
+	.icon-face {
+			background: url("../img/social/face-blk.png");
+			@include bg-contain;
+			&:hover {
+				background: url("../img/social/face-red.png");
+				@include bg-contain;
+			}
+	}
+
+	.icon-twit {
+			background: url("../img/social/twit-blk.png");
+			@include bg-contain;
+			&:hover {
+				background: url("../img/social/twit-red.png");
+				@include bg-contain;
+			}
+	}
+
+	.icon-pin {
+			background: url("../img/social/pin-blk.png");
+			@include bg-contain;
+			&:hover {
+				background: url("../img/social/pin-red.png");
+				@include bg-contain;
+			}
+	}
+	ul {
+		padding-top: 1%;
+		li {
+			display: inline-block;
+			margin-right: 13px;
+			height: 40px;
+			width: 40px;
+			@include transition(all 0.3s ease-in-out);
+			a {
+				color: transparent;
+				font-size: 3em;
+				&:hover {
+					cursor: pointer;
+					color: transparent;
+				} 
+			}
+		}
+	}
+
+	@include media( max-width 1024px, 6) { // tablet & below <ul>
+		text-align: center;
+		padding: 0 0 1.5em 0;
+	}
+}
+
+
+
+.l-main-container {
+	@include span-columns(8);
+	padding-left: 1%;
+	margin-right: 0;
+	.main-works-image {
+		margin: 0;
+		padding-bottom: 2em;
+		text-align: center;
+	}
+	@include media( max-width 810px, 6) { // tablet & below
+		@include span-columns(6);
+		padding: 0;
+		width: 100%;
+		max-width: 810px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 15px;
+		@include outer-container;
+		
+	}
+
+	// @include media( max-width 810px, 6) { // tablet & below
+ //    	@include span-columns(6);
+    	
+ //    	.main-works-image { 
+ //    		margin: 0;
+ //    		padding: 0;
+ //    	}
+	// }
+}
+
+.l-works-wrap {
+	min-height: 100vh;
+	padding-top: 10em;
+	background: #FFF; 
+	@include media( max-width 1024px, 6) { // tablet & below
+		padding-top: 4em;
+	}
+}
